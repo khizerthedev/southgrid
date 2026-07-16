@@ -255,10 +255,25 @@
   @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(5px);} }
  
   @media (max-width:900px){
-    .hero-inner{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; margin-bottom:8px; }
-    .hero-visual .frame{ width:min(72vw, 320px); }
+    .hero{ padding:100px 0 60px; }
+    .hero-inner{ grid-template-columns:1fr; gap:26px; }
+    .hero-copy{ text-align:left; }
+    .hero-copy h1{ font-size:clamp(36px, 9vw, 60px); line-height:1.02; }
+    .hero-copy p.lede{ margin:24px 0 0; max-width:460px; font-size:16px; }
+    .hero-ctas{ justify-content:flex-start; }
+    .hero-visual{ order:-1; margin-bottom:12px; }
+    .hero-visual .frame{ width:min(86vw, 340px); }
+    .hero-tag{ left:-18px; transform:none; bottom:-14px; }
     .scroll-cue{ display:none; }
+  }
+  @media (max-width:640px){
+    .hero{ padding:80px 0 48px; }
+    .hero-copy h1{ font-size:clamp(30px, 10vw, 48px); }
+    .hero-copy p.lede{ font-size:15px; }
+    .hero-ctas{ gap:12px; }
+    .hero-visual .frame{ width:min(92vw, 300px); padding:14px; }
+    .hero-tag{ padding:8px 12px; font-size:10px; letter-spacing:0.12em; }
+    .btn{ padding:14px 24px; font-size:12px; }
   }
  
   /* ===================== MARQUEE ===================== */
